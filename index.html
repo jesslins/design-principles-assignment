@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Treaty 1</title>
+    <!-- Link that allows the webpage to be styled with the external stylesheet. -->
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <!-- Internal stylesheet for styling that is specific to this webpage. -->
+    <style>
+      /* 
+        Styles the element with an id of inverted.
+
+        filter: invert(); inverts the colors of the image.
+      */
+      #inverted {
+        filter: invert();
+      }
+
+      /*
+        Styles content within a span.
+
+        font-weight: bold; makes the text bolded.
+        font-style: italic; italicizes the text.
+      */
+      span {
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      /*
+        Styles section with an id of "nations".
+
+        padding-left: 20px; makes the space between the content and the border larger.
+
+        padding-top: 1px; makes the space between the content and the border larger.
+
+        padding-bottom: 1px; makes the space between the content and the border larger.
+
+        background-color: #e7d4c3; sets the background color to a lighter orange than
+        the nav bar.
+      */
+      #nations {
+        padding-left: 2rem;
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        background-color: #ffcca3;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The header tags contain the main heading and the navigation bar. -->
+    <header>
+      <h1 class="heading">Treaty 1</h1>
+      <!-- Navigation bar to navigate to every webpage of my site. -->
+      <nav>
+        <!--
+          Using an unordered list to list all of my anchor tags/navigation 
+          tabs.
+        -->
+        <ul>
+          <!-- Anchor tag for the home page. -->
+          <li>
+            <a href="index.html">Home Page</a>
+          </li>
+          <!-- Anchor tag for the history page. -->
+          <li>
+            <a href="history.html">History of Treaty 1</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!--
+      The main tags contain the main content of the website, in this case,
+      it contains my headings and paragraphs introducing Treaty 1 and giving
+      base knowledge on it.
+    -->
+    <main>
+      <!--
+        Heading for the paragraph where I give a basic overview on the history of
+        Treaty 1.
+      -->
+      <h2 class="heading">About Treaty 1</h2>
+      <p>
+        At Lower Fort Garry, Treaty No. 1 was negotiated and signed in August
+        1871. The seven First Nations that signed the first of the numbered
+        Treaties make up the Treaty One Nation. They are Anishinaabe (Ojibwe)
+        and Nehiyaw (Cree).
+      </p>
+
+      <!--
+        These section tags contain the heading for a list, and a list that shows the different nations in this Treaty.
+      -->
+      <section id="nations">
+        <!-- Heading for the list that shows the different nations in Treaty 1. -->
+        <h3 class="heading">Nations Involved</h3>
+        <!-- 
+          Unordered list that shows the different nations in Treaty 1.
+
+          Span is used to style specific sections of text. In this case, it bolds and italicizes the names of the nations.
+        -->
+        <ul>
+          <li><span>Peguis</span> First Nation</li>
+          <li><span>Sagkeeng</span> First Nation</li>
+          <li><span>Brokenhead Ojibway</span> Nation</li>
+          <li><span>Roseau River Anishinaabe</span> First Nation</li>
+          <li><span>Long Plain</span> First Nation</li>
+          <li><span>Sandy Bay Ojibway</span> First Nation</li>
+          <li><span>Swan Lake</span> First Nation</li>
+        </ul>
+      </section>
+
+      <!-- Heading for the two maps that show Treaty areas. -->
+      <h2 class="heading">Treaty Maps</h2>
+      <br />
+      <img
+        src="images/1200px-Numbered-Treaties-Map.png"
+        width="40%"
+        alt="An image of a map of Canada, with shaded sections signifying the Treaty areas"
+      />
+      <img
+        src="images/Treaty_1_Territory.png"
+        width="27.5%"
+        id="inverted"
+        alt="An image of a map of Canada, zoomed into the lower area of Manitoba, partially 
+          shaded to signify the Treaty 1 area"
+      />
+
+      <br />
+      <br />
+
+      <!-- These section tags contain the header for my sources, and my sources for this webpage. -->
+      <section id="sources">
+        <!-- Heading for the list that shows my different sources. -->
+        <h4 class="heading">Sources</h4>
+        <!-- Unordered list that shows my different sources. -->
+        <ul>
+          <li>
+            <a href="https://treaty1.ca/">Treaty 1's Official Website</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- The footer tags contain the website's copyright information. -->
+    <footer>
+      <p><small>© Jessie Linsangan</small></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+/*
+  Colour Family Explanation
+  
+  Neutral Colours:
+    #f3e7dc (background) - very light (almost white) orange/beige
+    #5c3d2e (main text) - brown
+  
+  Primary Colour:
+    #453028 (headings) - dark brown
+
+  Secondary Colours:
+    #f0aa70 (nav bar)- orange
+    #ffcca3 (important info) - lighter orange
+
+  Explanation:
+    I chose orange and brown as the main colours of the website because
+    orange represents balance, and brown represents security and a down
+    to earth nature. 
+*/
+
+/*
+  Styles all elements
+
+  line-height: 140%; causes the spacing between each line to be 140% of
+  the font size of the element.
+*/
+* {
+  line-height: 140%;
+}
+
+/*
+  Styles anything within the html tags 
+
+  font-size: 62.5%; sets the default font size to be 62.5% of the default 
+  font size for the browser.
+*/
+html {
+  font-size: 62.5%;
+}
+
+/* 
+  Styles anything within the body tags.
+
+  background-color: #f3e7dc; sets the background color of the webpage to a 
+  light beige/orange.
+
+  margin: 0; gets rid of the outside margin, allowing the content to spread 
+  across the entire webpage.
+
+  font-size: 1.8rem; makes the size of the text 1.8 times the root element's
+  font size.
+
+  font-family: "Times New Roman", Times, serif; sets the font to Times New
+  Roman. If Times New Roman cannot be used, Times is used. If TImes cannot 
+  be used, the default serif font built into the browser is used.
+
+  word-spacing: 0.1rem; makes the space between each word slightly larger to
+  provide easier readability.
+
+  letter-spacing: 0.05rem; makes the space between each letter slightly larger 
+  to provide easier readability.
+*/
+body {
+  background-color: #f3e7dc;
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Times New Roman", Times, serif;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.05rem;
+}
+
+/*
+  Styles anything within the header tags.
+
+  padding: 0; makes the space between the content and the border smaller.
+
+  text-align: center; makes any text centered on the webpage.
+*/
+header {
+  padding: 0;
+  text-align: center;
+}
+
+/*
+  Styles anything with a class of heading.
+
+  color: #453028; sets the color of the text to a darker brown than the main text.
+*/
+.heading {
+  color: #453028;
+}
+
+/*
+  Styles anything within the ul tags within the header tags.
+
+  list-style-type: none; gets rid of the bullet points on the list items.
+
+  padding: 0; makes the space between the content and the border smaller.
+
+  overflow: hidden; clips any content that overflows the element's box. 
+  This gives it the rectangle surrounding the list items/navigation tabs.
+
+  background-color: #f0aa70; makes the bar orange.
+*/
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f0aa70;
+}
+
+/*
+  Styles anything within the li tags within the nav tags.
+
+  float: left; makes all of the navigation tabs go to the left, instead of 
+  being centered.
+*/
+nav li {
+  float: left;
+}
+
+/*
+  Styles anything within the a tags within the a tags within the nav tags.
+
+  display: block; displays elements as block elements.
+
+  color: #5c3d2e; sets the font color to a dark brown.
+
+  padding: 2.3rem; makes the space between the content and the border larger.
+
+  text-decoration: none; gets rid of the underline on the anchor tags.
+*/
+nav a {
+  display: block;
+  color: #5c3d2e;
+  padding: 2.3rem;
+  text-decoration: none;
+}
+
+/*
+  Styles anything within the a tags within the nav tags.
+
+  This is only active when the mouse hovers over one of the anchors, or when
+  the element is being focused on (i.e. when it's selected using tab).
+
+  background-color: #f59d56; sets the background color to a darker orange.
+
+  text-decoration: underline; puts an underline under the text.
+*/
+nav a:hover,
+nav a:focus {
+  background-color: #f59d56;
+  text-decoration: underline;
+}
+
+/*
+  Styles anything within the main or footer tags.
+
+  margin: 0.8rem; makes the space between the content and the edge of the
+  webpage larger.
+
+  color: #5c3d2e; sets the font color to a dark brown.
+*/
+main,
+footer {
+  margin: 0.8rem;
+  color: #5c3d2e;
+}
+/*
+  Styles anything within the tags with an id of sources.
+
+  padding-left: 2rem; makes the space between the content and the border larger.
+
+  padding-bottom: 2rem; makes the space between the content and the border larger.
+
+  padding-top: 0.1rem; makes the space between the content and the border larger.
+
+  background-color: #e7d4c3; sets the background color to a darker beige than the
+  main background.
+*/
+#sources {
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 0.1rem;
+  background-color: #e7d4c3;
+}
+
+/*
+  Styles anything within the anchor tags.
+
+  color: #614c3f; sets the font color to a dark brown.
+*/
+a {
+  color: #614c3f;
+}
+
+/*
+  Styles anything within the a tags with an id of sources.
+
+  This is only active when the user has already accessed this link.
+
+  color: #755947; sets the font color to a lighter brown than the original
+  text colour.
+*/
+.sources a:visited {
+  color: #755947;
+}
