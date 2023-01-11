@@ -62,20 +62,14 @@ html {
 */
 body {
   background-color: #f3e7dc;
-  margin: 0;
+  margin: 0 auto;
   font-size: 1.8rem;
   font-family: "Times New Roman", Times, serif;
   word-spacing: 0.1rem;
   letter-spacing: 0.05rem;
+  width: 960px;
 }
 
-/*
-  Styles anything within the header tags.
-
-  padding: 0; makes the space between the content and the border smaller.
-
-  text-align: center; makes any text centered on the webpage.
-*/
 header {
   padding: 0;
   text-align: center;
@@ -166,6 +160,7 @@ footer {
   margin: 0.8rem;
   color: #5c3d2e;
 }
+
 /*
   Styles anything within the tags with an id of sources.
 
