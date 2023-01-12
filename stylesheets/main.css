@@ -70,6 +70,106 @@ body {
   width: 960px;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #f3e7dc;
+  -webkit-transition: opacity 0.75s, visibility 0.75s;
+  -o-transition: opacity 0.75s, visibility 0.75s;
+  -moz-transition: opacity 0.75s, visibility 0.75s;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 8px solid #f9f1e9;
+  border-top-color: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: loading 0.75s ease infinite;
+  -moz-animation: loading 0.75s ease infinite;
+  -o-animation: loading 0.75s ease infinite;
+  animation: loading 0.75s ease infinite;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0turn);
+    transform: rotate(0turn);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@-moz-keyframes loading {
+  from {
+    -moz-transform: rotate(0turn);
+    transform: rotate(0turn);
+  }
+
+  to {
+    -moz-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@-o-keyframes loading {
+  from {
+    -o-transform: rotate(0turn);
+    transform: rotate(0turn);
+  }
+
+  to {
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0turn);
+    -moz-transform: rotate(0turn);
+    -o-transform: rotate(0turn);
+    transform: rotate(0turn);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
 header {
   padding: 0;
   text-align: center;
@@ -199,4 +299,9 @@ a {
 */
 .sources a:visited {
   color: #755947;
+}
+
+footer {
+  padding-left: 5px;
+  background-color: #e7d4c3;
 }
