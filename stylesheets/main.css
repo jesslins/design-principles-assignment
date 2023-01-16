@@ -1,25 +1,5 @@
 /*
-  Colour Family Explanation
-  
-  Neutral Colours:
-    #f3e7dc (background) - very light (almost white) orange/beige
-    #5c3d2e (main text) - brown
-  
-  Primary Colour:
-    #453028 (headings) - dark brown
-
-  Secondary Colours:
-    #f0aa70 (nav bar)- orange
-    #ffcca3 (important info) - lighter orange
-
-  Explanation:
-    I chose orange and brown as the main colours of the website because
-    orange represents balance, and brown represents security and a down
-    to earth nature. 
-*/
-
-/*
-  Styles all elements
+  Styles content within all elements.
 
   line-height: 140%; causes the spacing between each line to be 140% of
   the font size of the element.
@@ -29,7 +9,7 @@
 }
 
 /*
-  Styles anything within the html tags 
+  Styles content within the html tags.
 
   font-size: 62.5%; sets the default font size to be 62.5% of the default 
   font size for the browser.
@@ -39,13 +19,15 @@ html {
 }
 
 /* 
-  Styles anything within the body tags.
+  Styles content within the body tags.
 
   background-color: #f3e7dc; sets the background color of the webpage to a 
   light beige/orange.
 
-  margin: 0; gets rid of the outside margin, allowing the content to spread 
-  across the entire webpage.
+  margin: 0 auto; gets rid of the outside margin on the top and bottom of the element, 
+  allowing the content to spread across the entire vertical area of the webpage, and
+  sets the margin on the sides of the element to what the browser automatically 
+  determines. This is part of what creates a fixed-width layout
 
   font-size: 1.8rem; makes the size of the text 1.8 times the root element's
   font size.
@@ -59,6 +41,9 @@ html {
 
   letter-spacing: 0.05rem; makes the space between each letter slightly larger 
   to provide easier readability.
+
+  width: 960px; sets the width of the body to 960 pixels, which is the second part
+  of creating a fixed-width layout.
 */
 body {
   background-color: #f3e7dc;
@@ -71,21 +56,29 @@ body {
 }
 
 /*
-  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo.
 
-  Styles elements with a class of loader
+  Styles content within the tags with a class of loader.
 
-  position: fixed; makes the content's position relative to the viewport
-  width: 100vw; makes the element take up the entire width of the viewport
-  height: 100vh; makes the element take up the entire height of the viewport 
-  z-index: 1; makes the element visible above anything with a lower z-index
-  display:flex; makes it possible to use align-items and justify-content
-  align-items: center; makes the content centered vertically 
-  justify-content: center; makes the content centered horizontally
-  background: #f3e7dc; sets the background color to a light beige
+  position: fixed; makes the content's position relative to the viewport.
+
+  width: 100vw; makes the element take up the entire width of the viewport.
+
+  height: 100vh; makes the element take up the entire height of the viewport.
+
+  z-index: 1; makes the element visible above anything with a lower z-index.
+
+  display:flex; makes it possible to use align-items and justify-content.
+
+  align-items: center; makes the content centered vertically.
+
+  justify-content: center; makes the content centered horizontally.
+
+  background: #f3e7dc; sets the background color to a light beige.
+
 
   transition: opacity 0.75s, visibility 0.75s; makes it take 0.75 seconds to 
-    change the opacity, and 0.75s to change the visibility
+  change the opacity, and 0.75s to change the visibility.
 */
 .loader {
   position: fixed;
@@ -118,14 +111,16 @@ body {
 }
 
 /*  
-  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo.
 
-  This creates a new class that will get added to the element using JavaScript
+  Styles content within the tags with a class of loader--hidden.
 
   When we want the loader to hide,
 
-  opacity: 0; makes the element completely transparent
-  visibility: hidden; makes the element disappear, but still take up space on the webpage
+  opacity: 0; makes the element completely transparent.
+  
+  visibility: hidden; makes the element disappear, but still take up space on the 
+  webpage.
 */
 .loader--hidden {
   opacity: 0;
@@ -133,18 +128,26 @@ body {
 }
 
 /*
-  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo.
 
-  Places this content after the content of the elements with a class of loader
+  Places this content after the content of the tags with a class of loader.
 
-  content: ""; inserts empty content
-  width: 75px; sets the width of the element to 75 pixels
-  height: 75px; sets the height of the element to 75 pixels
-  border: 8px solid #f9f1e9; sets the thickness of the border to 8px, makes it solid, and sets the color to a light beige
-  border-top-color: #f5f5f5; sets the color of the top of the border to an off-white
-  border-radius: 50%; rounds the border enough to make it a circle
-  animation: loading 0.75s ease infinite; defines the animation name as loading, makes a single iteration last 0.75 seconds, 
-    makes the animation start slow, speed up, then end slow, and makes the animation last forever
+  content: ""; inserts empty content.
+
+  width: 75px; sets the width of the element to 75 pixels.
+
+  height: 75px; sets the height of the element to 75 pixels.
+
+  border: 8px solid #f9f1e9; sets the thickness of the border to 8 pixels, makes it solid, 
+  and sets the color to a light beige.
+
+  border-top-color: #f5f5f5; sets the color of the top of the border to an off-white.
+
+  border-radius: 50%; rounds the border enough to make it a circle.
+
+  animation: loading 0.75s ease infinite; defines the animation name as loading, makes 
+  a single iteration last 0.75 seconds, makes the animation start slow, speed up, then 
+  end slow, and makes the animation last forever.
 */
 .loader::after {
   content: "";
@@ -198,12 +201,14 @@ body {
 }
 
 /*  
-  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo.
 
-  Defines the loading animation
+  Defines the loading animation.
 
-  Sets the starting point to have a rotation of 0 turns
-  Sets the end point to have a rotation of 1 turn
+  from {transform: rotate(0turn);} sets the starting point to have a rotation of 0 
+  turns.
+
+  to {transform: rotate(1turn);} sets the end point to have a rotation of 1 turn.
 */
 @keyframes loading {
   from {
@@ -223,13 +228,20 @@ body {
   }
 }
 
+/* 
+  Styles content within the header tags.
+
+  padding: 0; makes the space between the content and the border smaller.
+
+  text-align: center makes the text centered on the webpage.
+*/
 header {
   padding: 0;
   text-align: center;
 }
 
 /*
-  Styles anything with a class of heading.
+  Styles content within the tags with a class of heading.
 
   color: #453028; sets the color of the text to a darker brown than the main text.
 */
@@ -238,7 +250,7 @@ header {
 }
 
 /*
-  Styles anything within the ul tags within the header tags.
+  Styles content within the ul tags within the header tags.
 
   list-style-type: none; gets rid of the bullet points on the list items.
 
@@ -257,7 +269,7 @@ nav ul {
 }
 
 /*
-  Styles anything within the li tags within the nav tags.
+  Styles content within the li tags within the nav tags.
 
   float: left; makes all of the navigation tabs go to the left, instead of 
   being centered.
@@ -267,27 +279,27 @@ nav li {
 }
 
 /*
-  Styles anything within the a tags within the a tags within the nav tags.
+  Styles content within the a tags within the a tags within the nav tags.
 
   display: block; displays elements as block elements.
 
   color: #5c3d2e; sets the font color to a dark brown.
 
-  padding: 2.3rem; makes the space between the content and the border larger.
+  padding: 23px; makes the space between the content and the border larger.
 
   text-decoration-line: none; gets rid of the underline on the anchor tags.
 */
 nav a {
   display: block;
   color: #5c3d2e;
-  padding: 2.3rem;
+  padding: 23px;
   -webkit-text-decoration-line: none;
   -moz-text-decoration-line: none;
   text-decoration-line: none;
 }
 
 /*
-  Styles anything within the a tags within the nav tags.
+  Styles content within the a tags within the nav tags.
 
   This is only active when the mouse hovers over one of the anchors, or when
   the element is being focused on (i.e. when it's selected using tab).
@@ -305,40 +317,40 @@ nav a:focus {
 }
 
 /*
-  Styles anything within the main or footer tags.
+  Styles content within the main or footer tags.
 
-  margin: 0.8rem; makes the space between the content and the edge of the
+  margin: 8px; makes the space between the content and the edge of the
   webpage larger.
 
   color: #5c3d2e; sets the font color to a dark brown.
 */
 main,
 footer {
-  margin: 0.8rem;
+  margin: 8px;
   color: #5c3d2e;
 }
 
 /*
-  Styles anything within the tags with an id of sources.
+  Styles content within the tags with an id of sources.
 
-  padding-left: 2rem; makes the space between the content and the border larger.
+  padding-left: 20px; makes the space between the content and the border larger.
 
-  padding-bottom: 2rem; makes the space between the content and the border larger.
+  padding-bottom: 20px; makes the space between the content and the border larger.
 
-  padding-top: 0.1rem; makes the space between the content and the border larger.
+  padding-top: 1px; makes the space between the content and the border larger.
 
   background-color: #e7d4c3; sets the background color to a darker beige than the
   main background.
 */
 #sources {
-  padding-left: 2rem;
-  padding-bottom: 2rem;
-  padding-top: 0.1rem;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 1px;
   background-color: #e7d4c3;
 }
 
 /*
-  Styles anything within the anchor tags.
+  Styles content within the anchor tags.
 
   color: #614c3f; sets the font color to a dark brown.
 */
@@ -347,7 +359,7 @@ a {
 }
 
 /*
-  Styles anything within the a tags with an id of sources.
+  Styles content within the a tags with an id of sources.
 
   This is only active when the user has already accessed this link.
 
@@ -358,6 +370,15 @@ a {
   color: #755947;
 }
 
+/*  
+  Styles content within the footer tags
+
+  padding-left: 5px; makes the space between the content and the border  on the left 
+  side larger.
+
+  background-color: #e7d4c3; sets the background color to a darker beige than the main
+  background
+*/
 footer {
   padding-left: 5px;
   background-color: #e7d4c3;

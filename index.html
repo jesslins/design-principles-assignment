@@ -8,7 +8,9 @@
   <title>Treaty 1</title>
   <!-- Link that allows the webpage to be styled with the external stylesheet. -->
   <link rel="stylesheet" href="stylesheets/main.css" />
+  <!-- Link that allows the webpage to have a specific icon -->
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <!-- Script that allows the webpage to be affected by an external JavaScript document. -->
   <script src="stylesheets/loader.js"></script>
   <!-- Internal stylesheet for styling that is specific to this webpage. -->
   <style>
@@ -25,6 +27,7 @@
       Styles content within a span.
 
       font-weight: bold; makes the text bolded.
+
       font-style: italic; italicizes the text.
     */
     span {
@@ -43,19 +46,25 @@
 
       background-color: #fadac2; sets the background color to a lighter orange than
       the nav bar.
+      
+      border: 2px solid #453028; sets the thickness of the border to 2 pixels, makes it solid, 
+      and sets the color to a dark brown.
+
+      border-radius: 3px; rounds the edges of the border by 3 pixels
     */
     #nations {
-      padding-left: 2rem;
-      padding-top: 0.1rem;
-      padding-bottom: 0.1rem;
+      padding-left: 20px;
+      padding-top: 1px;
+      padding-bottom: 1px;
       background-color: #fadac2;
-      border: 0.2rem solid #453028;
-      border-radius: 0.3rem;
+      border: 2px solid #453028;
+      border-radius: 3px;
     }
   </style>
 </head>
 
 <body>
+  <!-- These div tags are for the loader spinner -->
   <div class="loader"></div>
   <!-- The header tags contain the main heading and the navigation bar. -->
   <header>
