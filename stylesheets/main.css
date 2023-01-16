@@ -70,7 +70,12 @@ body {
   width: 960px;
 }
 
-.loader {
+/*
+  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+  
+  Styles anything with an id of loader
+*/
+#loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -99,12 +104,17 @@ body {
   transition: opacity 0.75s, visibility 0.75s;
 }
 
-.loader--hidden {
+/*  
+  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+
+  Styles
+*/
+#loader--hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-.loader::after {
+#loader::after {
   content: "";
   width: 75px;
   height: 75px;
@@ -119,6 +129,11 @@ body {
   animation: loading 0.75s ease infinite;
 }
 
+/*  
+  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+
+  
+*/
 @-webkit-keyframes loading {
   from {
     -webkit-transform: rotate(0turn);
@@ -131,6 +146,9 @@ body {
   }
 }
 
+/*  
+  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+*/
 @-moz-keyframes loading {
   from {
     -moz-transform: rotate(0turn);
@@ -143,6 +161,9 @@ body {
   }
 }
 
+/*  
+  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+*/
 @-o-keyframes loading {
   from {
     -o-transform: rotate(0turn);
@@ -155,11 +176,15 @@ body {
   }
 }
 
+/*  
+  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+*/
 @keyframes loading {
   from {
     -webkit-transform: rotate(0turn);
     -moz-transform: rotate(0turn);
     -o-transform: rotate(0turn);
+    -ms-tranform: rotate(0turn);
     transform: rotate(0turn);
   }
 
@@ -167,6 +192,7 @@ body {
     -webkit-transform: rotate(1turn);
     -moz-transform: rotate(1turn);
     -o-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
     transform: rotate(1turn);
   }
 }
@@ -223,13 +249,17 @@ nav li {
 
   padding: 2.3rem; makes the space between the content and the border larger.
 
-  text-decoration: none; gets rid of the underline on the anchor tags.
+  text-decoration-line: none; gets rid of the underline on the anchor tags.
 */
 nav a {
   display: block;
   color: #5c3d2e;
   padding: 2.3rem;
-  text-decoration: none;
+  -webkit-text-decoration-line: none;
+  -moz-text-decoration-line: none;
+  text-decoration-line: none;
+
+
 }
 
 /*
@@ -240,12 +270,14 @@ nav a {
 
   background-color: #f59d56; sets the background color to a darker orange.
 
-  text-decoration: underline; puts an underline under the text.
+  text-decoration-line: underline; puts an underline under the text.
 */
 nav a:hover,
 nav a:focus {
   background-color: #f59d56;
-  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+  -moz-text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 /*
