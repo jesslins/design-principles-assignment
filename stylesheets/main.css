@@ -71,11 +71,23 @@ body {
 }
 
 /*
-  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
-  
-  Styles anything with an id of loader
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
+
+  Styles elements with a class of loader
+
+  position: fixed; makes the content's position relative to the viewport
+  width: 100vw; makes the element take up the entire width of the viewport
+  height: 100vh; makes the element take up the entire height of the viewport 
+  z-index: 1; makes the element visible above anything with a lower z-index
+  display:flex; makes it possible to use align-items and justify-content
+  align-items: center; makes the content centered vertically 
+  justify-content: center; makes the content centered horizontally
+  background: #f3e7dc; sets the background color to a light beige
+
+  transition: opacity 0.75s, visibility 0.75s; makes it take 0.75 seconds to 
+    change the opacity, and 0.75s to change the visibility
 */
-#loader {
+.loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -98,6 +110,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   background: #f3e7dc;
+
   -webkit-transition: opacity 0.75s, visibility 0.75s;
   -o-transition: opacity 0.75s, visibility 0.75s;
   -moz-transition: opacity 0.75s, visibility 0.75s;
@@ -105,21 +118,40 @@ body {
 }
 
 /*  
-  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
 
-  Styles
+  This creates a new class that will get added to the element using JavaScript
+
+  When we want the loader to hide,
+
+  opacity: 0; makes the element completely transparent
+  visibility: hidden; makes the element disappear, but still take up space on the webpage
 */
-#loader--hidden {
+.loader--hidden {
   opacity: 0;
   visibility: hidden;
 }
 
-#loader::after {
+/*
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
+
+  Places this content after the content of the elements with a class of loader
+
+  content: ""; inserts empty content
+  width: 75px; sets the width of the element to 75 pixels
+  height: 75px; sets the height of the element to 75 pixels
+  border: 8px solid #f9f1e9; sets the thickness of the border to 8px, makes it solid, and sets the color to a light beige
+  border-top-color: #f5f5f5; sets the color of the top of the border to an off-white
+  border-radius: 50%; rounds the border enough to make it a circle
+  animation: loading 0.75s ease infinite; defines the animation name as loading, makes a single iteration last 0.75 seconds, 
+    makes the animation start slow, speed up, then end slow, and makes the animation last forever
+*/
+.loader::after {
   content: "";
   width: 75px;
   height: 75px;
   border: 8px solid #f9f1e9;
-  border-top-color: white;
+  border-top-color: #f5f5f5;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -129,11 +161,6 @@ body {
   animation: loading 0.75s ease infinite;
 }
 
-/*  
-  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
-
-  
-*/
 @-webkit-keyframes loading {
   from {
     -webkit-transform: rotate(0turn);
@@ -146,9 +173,6 @@ body {
   }
 }
 
-/*  
-  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
-*/
 @-moz-keyframes loading {
   from {
     -moz-transform: rotate(0turn);
@@ -161,9 +185,6 @@ body {
   }
 }
 
-/*  
-  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
-*/
 @-o-keyframes loading {
   from {
     -o-transform: rotate(0turn);
@@ -177,14 +198,19 @@ body {
 }
 
 /*  
-  Code from https: //codepen.io/dcode-software/pen/rNYGdeg
+  Code from https://www.youtube.com/watch?v=-HS9IIuT_Mo
+
+  Defines the loading animation
+
+  Sets the starting point to have a rotation of 0 turns
+  Sets the end point to have a rotation of 1 turn
 */
 @keyframes loading {
   from {
     -webkit-transform: rotate(0turn);
     -moz-transform: rotate(0turn);
     -o-transform: rotate(0turn);
-    -ms-tranform: rotate(0turn);
+    -ms-transform: rotate(0turn);
     transform: rotate(0turn);
   }
 
@@ -258,8 +284,6 @@ nav a {
   -webkit-text-decoration-line: none;
   -moz-text-decoration-line: none;
   text-decoration-line: none;
-
-
 }
 
 /*
