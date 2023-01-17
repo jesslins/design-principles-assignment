@@ -233,7 +233,7 @@ body {
 
   padding: 0; makes the space between the content and the border smaller.
 
-  text-align: center makes the text centered on the webpage.
+  text-align: center makes the text centered vertically on the webpage.
 */
 header {
   padding: 0;
