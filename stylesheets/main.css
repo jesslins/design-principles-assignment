@@ -331,6 +331,28 @@ footer {
 }
 
 /*
+  Styles content within tags with an id of "important-info".
+
+  padding: 0 20px; makes the space between the content and the border larger.
+
+  background-color: #fadac2; sets the background color to a lighter orange than
+  the nav bar.
+      
+  border: 2px solid #453028; sets the thickness of the border to 2 pixels, makes it solid, 
+  and sets the color to a dark brown.
+
+  border-radius: 3px; rounds the edges of the border by 3 pixels
+*/
+#important-info {
+  padding: 0 20px;
+  background-color: #fadac2;
+  border: 2px solid #453028;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
   Styles content within the tags with an id of sources.
 
   padding-left: 20px; makes the space between the content and the border larger.

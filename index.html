@@ -15,7 +15,7 @@
   <!-- Internal stylesheet for styling that is specific to this webpage. -->
   <style>
     /* 
-      Styles the element with an id of inverted.
+      Styles content within the element with an id of inverted.
 
       filter: invert(); inverts the colors of the image.
     */
@@ -24,7 +24,7 @@
     }
 
     /*
-      Styles content within a span.
+      Styles content within span tags.
 
       font-weight: bold; makes the text bolded.
 
@@ -33,32 +33,6 @@
     span {
       font-weight: bold;
       font-style: italic;
-    }
-
-    /*
-      Styles section with an id of "nations".
-
-      padding-left: 20px; makes the space between the content and the border larger.
-
-      padding-top: 1px; makes the space between the content and the border larger.
-
-      padding-bottom: 1px; makes the space between the content and the border larger.
-
-      background-color: #fadac2; sets the background color to a lighter orange than
-      the nav bar.
-      
-      border: 2px solid #453028; sets the thickness of the border to 2 pixels, makes it solid, 
-      and sets the color to a dark brown.
-
-      border-radius: 3px; rounds the edges of the border by 3 pixels
-    */
-    #nations {
-      padding-left: 20px;
-      padding-top: 1px;
-      padding-bottom: 1px;
-      background-color: #fadac2;
-      border: 2px solid #453028;
-      border-radius: 3px;
     }
   </style>
 </head>
@@ -110,10 +84,16 @@
         and Nehiyaw (Cree).
       </p>
 
+      <h3 class="heading">What Makes Treaty 1 Different</h3>
+      <p>
+        During the negotiations, Treaty 1 had daily transcripts published in The Manitoban.
+        This did not happen for the other numbered treaties.
+      </p>
+
       <!--
-        These section tags contain the heading for a list, and a list that shows the different nations in this Treaty.
+        These div tags contain the heading for a list, and a list that shows the different nations in this Treaty.
       -->
-      <div id="nations">
+      <div id="important-info">
         <!-- Heading for the list that shows the different nations in Treaty 1. -->
         <h3 class="heading">Nations Involved</h3>
         <!-- 
@@ -135,7 +115,6 @@
 
     <!-- Heading for the two maps that show Treaty areas. -->
     <h2 class="heading">Treaty Maps</h2>
-    <br />
     <img src="images/1200px-Numbered-Treaties-Map.png" width="40%"
       alt="An image of a map of Canada, with shaded sections signifying the Treaty areas." />
     <img src="images/Treaty_1_Territory.png" width="27.5%" id="inverted" alt="An image of a map of Canada, zoomed into the lower area of Manitoba, partially 
